@@ -1,0 +1,4 @@
+class DailyForecast < Forecast
+
+
+end

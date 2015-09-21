@@ -1,0 +1,4 @@
+class Hurricane
+
+
+end

@@ -7,12 +7,10 @@ ActiveRecord::Base.establish_connection(
 
 class WundergroundMigration < ActiveRecord::Migration
   def change
-    create_table "assignment_grades", force: true do |t|
-      t.integer  "assignment_id"
-      t.integer  "course_student_id"
-      t.float    "final_grade"
-      t.datetime "submitted_at"
-      t.text     "comments"
+    create_table "weather_queries" do |t|
+      t.string  "endpoint"
+      t.string  "location"
+      t.text    "response"
       t.timestamps
     end
   end
