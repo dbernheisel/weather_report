@@ -1,5 +1,5 @@
 {
-  "hourly_forecast.api": {
+  "hourly_forecast_response": {
     "response": {
       "version": "0.1",
       "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
@@ -2890,7 +2890,7 @@
       }
     ]
   },
-  "hourly_10day_forecast.api": {
+  "hourly_10day_forecast_response": {
     {
       "response": {
         "version": "0.1",
@@ -22103,7 +22103,7 @@
       ]
     }
   },
-  "daily_forecast.api": {
+  "daily_forecast_response": {
     {
       "response": {
         "version": "0.1",
@@ -22493,7 +22493,7 @@
       }
     }
   },
-  "daily_10day_forecast.api": {
+  "daily_10day_forecast_response": {
     {
       "response": {
         "version": "0.1",
@@ -23435,7 +23435,7 @@
       }
     }
   },
-  "current_hurricanes.api": {
+  "current_hurricanes_response": {
     {
       "response": {
         "version": "0.1",
@@ -29661,7 +29661,7 @@
       ]
     }
   },
-  "astronomy.api": {
+  "astronomy_response": {
     {
       "response": {
         "version": "0.1",
@@ -29700,7 +29700,7 @@
       }
     }
   },
-  "current_alerts.api": {
+  "current_alerts_response": {
     {
       "response": {
         "version": "0.1",
@@ -29826,7 +29826,7 @@
       ]
     }
   },
-  "current_conditions.api": {
+  "current_conditions_response": {
     {
       "response": {
         "version": "0.1",
