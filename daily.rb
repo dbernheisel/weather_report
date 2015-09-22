@@ -5,6 +5,7 @@ class DailyForecast
   attr_reader :forecasts
 
   # TODO: Support detailed daily forecasts (Day, Night)
+  #   Pull from 'txt_forecast' instead of 'simpleforecast'
   def initialize(location, ten_day: false)
     @location = get_location(location)
     endpoint = "forecast"
@@ -20,7 +21,7 @@ class DailyForecast
     @response["forecastday"].each do |day|
 
       @forecasts << {
-        date: readable_time(epoch: day["date"]["epoch"].to_i),
+        date: readable_time(epoch: day["date"]["epoch"].to_i, military_time: false),
         high: "#{day["high"]["fahrenheit"]}°F",
         low: "#{day["low"]["fahrenheit"]}°F",
         conditions: day["conditions"],

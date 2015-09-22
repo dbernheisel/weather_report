@@ -1,14 +1,12 @@
-module Wunderground
-  class HourlyForecast < Forecast
-    include ActiveModel::Serializers::JSON
+class HourlyForecast
+  include Wunderground
 
-    def initialize(location)
-      @location = Wunderground.get_location(location)
-      @response = Wunderground.get_response("hourly10day")
-      # TODO: Load query into table for caching.
-    end
-
-    # TODO: Complete hourly updates.
-
+  def initialize(location)
+    @location = get_location(location)
+    @response = get_response("hourly10day")
+    # TODO: Load query into table for caching.
   end
+
+  # TODO: Complete hourly updates.
+
 end

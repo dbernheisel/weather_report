@@ -73,4 +73,16 @@ class WundergroundTests < ActiveSupport::TestCase
     assert_equal "58°F", four.forecasts[3][:low]
     assert_equal "13/mph NNW", ten.forecasts[9][:average_windspeed]
   end
+
+  def test_alerts
+    a = Alert.new("NM/Glenwood")
+    assert_equal "Flash Flood Watch", a.alerts[0][:description]
+    assert_equal "9:36pm", a.alerts[0][:starts_at]
+    assert_equal "12:00am", a.alerts[0][:expires_at]
+    assert_equal 5, a.alerts[0][:zones].length
+  end
+
+  def test_hurricanes
+
+  end
 end
