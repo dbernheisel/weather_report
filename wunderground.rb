@@ -19,13 +19,13 @@ ActiveRecord::Base.establish_connection(
 module Wunderground
   @api_key = ENV['WUNDERGROUND_API']
 
-  def get_location(location)
+  def self.get_location(location)
     # TODO: Parse supplied location
     return location
   end
 
   private
-  def get_response(endpoint)
+  def self.get_response(endpoint)
     HTTParty.get("http://api.wunderground.com/api/#{Wunderground.api_key}/#{endpoint}/q/#{Wunderground.get_location(@location)}.json")
   end
 end

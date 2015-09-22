@@ -11,7 +11,7 @@ class WundergroundMigration < ActiveRecord::Migration
       t.string  "endpoint"
       t.string  "location"
       t.text    "response"
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
