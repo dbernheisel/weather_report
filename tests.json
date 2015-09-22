@@ -1,4 +1,946 @@
 {
+    "daily_10day_forecast_response":
+      {
+        "response": {
+          "version": "0.1",
+          "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+          "features": {
+            "forecast10day": 1
+          }
+        },
+        "forecast": {
+          "txt_forecast": {
+            "date": "10:45 AM PDT",
+            "forecastday": [
+              {
+                "period": 0,
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "title": "Monday",
+                "fcttext": "Plentiful sunshine. High near 85F. Winds WNW at 10 to 15 mph.",
+                "fcttext_metric": "Sunny. High around 30C. Winds WNW at 15 to 25 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 1,
+                "icon": "nt_clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+                "title": "Monday Night",
+                "fcttext": "Clear skies. Low 58F. Winds WSW at 10 to 15 mph.",
+                "fcttext_metric": "Clear skies. Low 14C. Winds WSW at 15 to 25 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 2,
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "title": "Tuesday",
+                "fcttext": "A mainly sunny sky. High 68F. Winds WSW at 10 to 20 mph.",
+                "fcttext_metric": "Mainly sunny. High near 20C. Winds WSW at 15 to 30 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 3,
+                "icon": "nt_clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+                "title": "Tuesday Night",
+                "fcttext": "Clear. Low 56F. Winds W at 10 to 20 mph.",
+                "fcttext_metric": "A mostly clear sky. Low 13C. Winds W at 15 to 30 km/h.",
+                "pop": "10"
+              },
+              {
+                "period": 4,
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "title": "Wednesday",
+                "fcttext": "Plentiful sunshine. High 72F. Winds WNW at 10 to 15 mph.",
+                "fcttext_metric": "Sunshine. High 22C. Winds WNW at 15 to 25 km/h.",
+                "pop": "10"
+              },
+              {
+                "period": 5,
+                "icon": "nt_partlycloudy",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+                "title": "Wednesday Night",
+                "fcttext": "Partly cloudy. Low 58F. Winds NW at 5 to 10 mph.",
+                "fcttext_metric": "Partly cloudy. Low around 15C. Winds NW at 10 to 15 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 6,
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "title": "Thursday",
+                "fcttext": "A few clouds early, otherwise mostly sunny. High 79F. Winds NW at 10 to 15 mph.",
+                "fcttext_metric": "A few passing clouds, otherwise generally sunny. High 26C. Winds NW at 15 to 25 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 7,
+                "icon": "nt_partlycloudy",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+                "title": "Thursday Night",
+                "fcttext": "Partly cloudy skies. Low 58F. Winds WNW at 10 to 15 mph.",
+                "fcttext_metric": "Some clouds early will give way to generally clear conditions overnight. Low around 15C. Winds WNW at 15 to 25 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 8,
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "title": "Friday",
+                "fcttext": "Sunny. High 77F. Winds NW at 10 to 20 mph.",
+                "fcttext_metric": "Mainly sunny. High around 25C. Winds NW at 15 to 30 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 9,
+                "icon": "nt_clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+                "title": "Friday Night",
+                "fcttext": "Clear. Low 59F. Winds WNW at 10 to 15 mph.",
+                "fcttext_metric": "A mostly clear sky. Low around 15C. Winds WNW at 15 to 25 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 10,
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "title": "Saturday",
+                "fcttext": "Sunny. High 71F. Winds WNW at 15 to 25 mph.",
+                "fcttext_metric": "Mainly sunny. High 22C. Winds WNW at 25 to 40 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 11,
+                "icon": "nt_clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+                "title": "Saturday Night",
+                "fcttext": "Clear. Low 56F. Winds WNW at 10 to 20 mph.",
+                "fcttext_metric": "Clear. Low 13C. Winds WNW at 15 to 30 km/h.",
+                "pop": "10"
+              },
+              {
+                "period": 12,
+                "icon": "partlycloudy",
+                "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+                "title": "Sunday",
+                "fcttext": "Mostly sunny skies with gusty winds developing later in the day. High 67F. Winds WNW at 20 to 30 mph.",
+                "fcttext_metric": "Mostly sunny skies with gusty winds developing later in the day. High 19C. Winds WNW at 25 to 40 km/h.",
+                "pop": "10"
+              },
+              {
+                "period": 13,
+                "icon": "nt_clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+                "title": "Sunday Night",
+                "fcttext": "Clear skies. Low around 55F. Winds WNW at 15 to 25 mph.",
+                "fcttext_metric": "A mostly clear sky. Low 13C. WNW winds at 25 to 40 km/h, decreasing to 10 to 15 km/h.",
+                "pop": "10"
+              },
+              {
+                "period": 14,
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "title": "Monday",
+                "fcttext": "A mainly sunny sky. High 68F. Winds NW at 10 to 20 mph.",
+                "fcttext_metric": "Sunny skies. High around 20C. Winds NW at 15 to 30 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 15,
+                "icon": "nt_clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+                "title": "Monday Night",
+                "fcttext": "Clear. Low around 55F. NNW winds at 10 to 20 mph, decreasing to less than 5 mph.",
+                "fcttext_metric": "Clear skies. Low 13C. NNW winds at 15 to 30 km/h, decreasing to 5 to 10 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 16,
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "title": "Tuesday",
+                "fcttext": "Mainly sunny. High 69F. Winds NNW at 10 to 20 mph.",
+                "fcttext_metric": "Mainly sunny. High 21C. Winds NNW at 15 to 30 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 17,
+                "icon": "nt_clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+                "title": "Tuesday Night",
+                "fcttext": "Clear. Low 56F. Winds NNW at 10 to 15 mph.",
+                "fcttext_metric": "A mostly clear sky. Low 13C. Winds NNW at 15 to 25 km/h.",
+                "pop": "10"
+              },
+              {
+                "period": 18,
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "title": "Wednesday",
+                "fcttext": "Sunny skies. High 73F. Winds NNW at 10 to 20 mph.",
+                "fcttext_metric": "Sunny. High 23C. Winds NNW at 15 to 30 km/h.",
+                "pop": "0"
+              },
+              {
+                "period": 19,
+                "icon": "nt_clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+                "title": "Wednesday Night",
+                "fcttext": "Clear skies. Low 56F. Winds NW at 10 to 15 mph.",
+                "fcttext_metric": "Clear skies. Low 13C. Winds NW at 15 to 25 km/h.",
+                "pop": "0"
+              }
+            ]
+          },
+          "simpleforecast": {
+            "forecastday": [
+              {
+                "date": {
+                  "epoch": "1442887200",
+                  "pretty": "7:00 PM PDT on September 21, 2015",
+                  "day": 21,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 263,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Mon",
+                  "weekday": "Monday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 1,
+                "high": {
+                  "fahrenheit": "85",
+                  "celsius": "29"
+                },
+                "low": {
+                  "fahrenheit": "58",
+                  "celsius": "14"
+                },
+                "conditions": "Clear",
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "skyicon": "",
+                "pop": 0,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 15,
+                  "kph": 24,
+                  "dir": "WNW",
+                  "degrees": 296
+                },
+                "avewind": {
+                  "mph": 12,
+                  "kph": 19,
+                  "dir": "WNW",
+                  "degrees": 296
+                },
+                "avehumidity": 37,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              },
+              {
+                "date": {
+                  "epoch": "1442973600",
+                  "pretty": "7:00 PM PDT on September 22, 2015",
+                  "day": 22,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 264,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Tue",
+                  "weekday": "Tuesday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 2,
+                "high": {
+                  "fahrenheit": "68",
+                  "celsius": "20"
+                },
+                "low": {
+                  "fahrenheit": "56",
+                  "celsius": "13"
+                },
+                "conditions": "Clear",
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "skyicon": "",
+                "pop": 0,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 20,
+                  "kph": 32,
+                  "dir": "WSW",
+                  "degrees": 251
+                },
+                "avewind": {
+                  "mph": 16,
+                  "kph": 26,
+                  "dir": "WSW",
+                  "degrees": 251
+                },
+                "avehumidity": 70,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              },
+              {
+                "date": {
+                  "epoch": "1443060000",
+                  "pretty": "7:00 PM PDT on September 23, 2015",
+                  "day": 23,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 265,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Wed",
+                  "weekday": "Wednesday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 3,
+                "high": {
+                  "fahrenheit": "72",
+                  "celsius": "22"
+                },
+                "low": {
+                  "fahrenheit": "58",
+                  "celsius": "14"
+                },
+                "conditions": "Clear",
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "skyicon": "",
+                "pop": 10,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 15,
+                  "kph": 24,
+                  "dir": "WNW",
+                  "degrees": 282
+                },
+                "avewind": {
+                  "mph": 11,
+                  "kph": 18,
+                  "dir": "WNW",
+                  "degrees": 282
+                },
+                "avehumidity": 61,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              },
+              {
+                "date": {
+                  "epoch": "1443146400",
+                  "pretty": "7:00 PM PDT on September 24, 2015",
+                  "day": 24,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 266,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Thu",
+                  "weekday": "Thursday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 4,
+                "high": {
+                  "fahrenheit": "79",
+                  "celsius": "26"
+                },
+                "low": {
+                  "fahrenheit": "58",
+                  "celsius": "14"
+                },
+                "conditions": "Clear",
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "skyicon": "",
+                "pop": 0,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 15,
+                  "kph": 24,
+                  "dir": "NW",
+                  "degrees": 326
+                },
+                "avewind": {
+                  "mph": 12,
+                  "kph": 19,
+                  "dir": "NW",
+                  "degrees": 326
+                },
+                "avehumidity": 54,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              },
+              {
+                "date": {
+                  "epoch": "1443232800",
+                  "pretty": "7:00 PM PDT on September 25, 2015",
+                  "day": 25,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 267,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Fri",
+                  "weekday": "Friday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 5,
+                "high": {
+                  "fahrenheit": "77",
+                  "celsius": "25"
+                },
+                "low": {
+                  "fahrenheit": "59",
+                  "celsius": "15"
+                },
+                "conditions": "Clear",
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "skyicon": "",
+                "pop": 0,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 20,
+                  "kph": 32,
+                  "dir": "NW",
+                  "degrees": 304
+                },
+                "avewind": {
+                  "mph": 14,
+                  "kph": 23,
+                  "dir": "NW",
+                  "degrees": 304
+                },
+                "avehumidity": 55,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              },
+              {
+                "date": {
+                  "epoch": "1443319200",
+                  "pretty": "7:00 PM PDT on September 26, 2015",
+                  "day": 26,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 268,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Sat",
+                  "weekday": "Saturday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 6,
+                "high": {
+                  "fahrenheit": "71",
+                  "celsius": "22"
+                },
+                "low": {
+                  "fahrenheit": "56",
+                  "celsius": "13"
+                },
+                "conditions": "Clear",
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "skyicon": "",
+                "pop": 0,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 25,
+                  "kph": 40,
+                  "dir": "WNW",
+                  "degrees": 284
+                },
+                "avewind": {
+                  "mph": 17,
+                  "kph": 27,
+                  "dir": "WNW",
+                  "degrees": 284
+                },
+                "avehumidity": 58,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              },
+              {
+                "date": {
+                  "epoch": "1443405600",
+                  "pretty": "7:00 PM PDT on September 27, 2015",
+                  "day": 27,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 269,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Sun",
+                  "weekday": "Sunday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 7,
+                "high": {
+                  "fahrenheit": "67",
+                  "celsius": "19"
+                },
+                "low": {
+                  "fahrenheit": "55",
+                  "celsius": "13"
+                },
+                "conditions": "Partly Cloudy",
+                "icon": "partlycloudy",
+                "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+                "skyicon": "",
+                "pop": 10,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 30,
+                  "kph": 48,
+                  "dir": "WNW",
+                  "degrees": 300
+                },
+                "avewind": {
+                  "mph": 20,
+                  "kph": 32,
+                  "dir": "WNW",
+                  "degrees": 300
+                },
+                "avehumidity": 57,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              },
+              {
+                "date": {
+                  "epoch": "1443492000",
+                  "pretty": "7:00 PM PDT on September 28, 2015",
+                  "day": 28,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 270,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Mon",
+                  "weekday": "Monday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 8,
+                "high": {
+                  "fahrenheit": "68",
+                  "celsius": "20"
+                },
+                "low": {
+                  "fahrenheit": "55",
+                  "celsius": "13"
+                },
+                "conditions": "Clear",
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "skyicon": "",
+                "pop": 0,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 20,
+                  "kph": 32,
+                  "dir": "NW",
+                  "degrees": 324
+                },
+                "avewind": {
+                  "mph": 15,
+                  "kph": 24,
+                  "dir": "NW",
+                  "degrees": 324
+                },
+                "avehumidity": 57,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              },
+              {
+                "date": {
+                  "epoch": "1443578400",
+                  "pretty": "7:00 PM PDT on September 29, 2015",
+                  "day": 29,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 271,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Tue",
+                  "weekday": "Tuesday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 9,
+                "high": {
+                  "fahrenheit": "69",
+                  "celsius": "21"
+                },
+                "low": {
+                  "fahrenheit": "56",
+                  "celsius": "13"
+                },
+                "conditions": "Clear",
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "skyicon": "",
+                "pop": 0,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 20,
+                  "kph": 32,
+                  "dir": "NNW",
+                  "degrees": 334
+                },
+                "avewind": {
+                  "mph": 14,
+                  "kph": 23,
+                  "dir": "NNW",
+                  "degrees": 334
+                },
+                "avehumidity": 53,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              },
+              {
+                "date": {
+                  "epoch": "1443664800",
+                  "pretty": "7:00 PM PDT on September 30, 2015",
+                  "day": 30,
+                  "month": 9,
+                  "year": 2015,
+                  "yday": 272,
+                  "hour": 19,
+                  "min": "00",
+                  "sec": 0,
+                  "isdst": "1",
+                  "monthname": "September",
+                  "monthname_short": "Sep",
+                  "weekday_short": "Wed",
+                  "weekday": "Wednesday",
+                  "ampm": "PM",
+                  "tz_short": "PDT",
+                  "tz_long": "America/Los_Angeles"
+                },
+                "period": 10,
+                "high": {
+                  "fahrenheit": "73",
+                  "celsius": "23"
+                },
+                "low": {
+                  "fahrenheit": "56",
+                  "celsius": "13"
+                },
+                "conditions": "Clear",
+                "icon": "clear",
+                "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+                "skyicon": "",
+                "pop": 0,
+                "qpf_allday": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_day": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "qpf_night": {
+                  "in": 0,
+                  "mm": 0
+                },
+                "snow_allday": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_day": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "snow_night": {
+                  "in": 0,
+                  "cm": 0
+                },
+                "maxwind": {
+                  "mph": 20,
+                  "kph": 32,
+                  "dir": "NNW",
+                  "degrees": 331
+                },
+                "avewind": {
+                  "mph": 13,
+                  "kph": 21,
+                  "dir": "NNW",
+                  "degrees": 331
+                },
+                "avehumidity": 48,
+                "maxhumidity": 0,
+                "minhumidity": 0
+              }
+            ]
+          }
+        }
+      },
+
     "hourly_forecast_response":
     {
       "response": {

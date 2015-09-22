@@ -1,15 +1,33 @@
-module Wunderground
-  class DailyForecast < Forecast
-    include ActiveModel::Serializers::JSON
+class DailyForecast
+  include Wunderground
+  attr_reader :location
+  attr_reader :response
+  attr_reader :forecasts
 
+  # TODO: Support detailed daily forecasts (Day, Night)
+  def initialize(location, ten_day: false)
+    @location = get_location(location)
+    endpoint = "forecast"
+    endpoint = "forecast10day" if ten_day
+    response = get_response(endpoint, location: @location)
+    @response = response["forecast"]["simpleforecast"]
+    get_forecasts(ten_day: ten_day)
+    # TODO: Load query into table for caching.
+  end
 
+  def get_forecasts(ten_day: false)
+    @forecasts = []
+    @response["forecastday"].each do |day|
 
-    def initialize(location)
-      @location = Wunderground.get_location(location)
-      @response = Wunderground.get_response("hourly10day")
-      # TODO: Load query into table for caching.
+      @forecasts << {
+        date: readable_time(epoch: day["date"]["epoch"].to_i),
+        high: "#{day["high"]["fahrenheit"]}°F",
+        low: "#{day["low"]["fahrenheit"]}°F",
+        conditions: day["conditions"],
+        icon: day["icon"],
+        average_humidity: "#{day["avehumidity"]}%",
+        average_windspeed: "#{day["avewind"]["mph"]}/mph #{day["avewind"]["dir"]}",
+      }
     end
-
-
   end
 end

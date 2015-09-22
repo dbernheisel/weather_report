@@ -18,8 +18,6 @@ WundergroundMigration.migrate(:up) rescue false
 $all_responses = JSON.parse(File.read('tests.json'))
 sample_current_alerts_response = $all_responses["current_alerts_response"]
 sample_current_hurricanes_response = $all_responses["current_hurricanes_response"]
-sample_daily_forecast_response = $all_responses["daily_forecast_response"]
-sample_daily_10day_forecast_response = $all_responses["daily_10day_forecast_response"]
 sample_hourly_forecast_response = $all_responses["hourly_forecast_response"]
 sample_hourly_10day_forecast_response = $all_responses["hourly_10day_forecast_response"]
 
@@ -35,6 +33,15 @@ class Condition
     response = $all_responses["current_conditions_response"]
     @response = response["current_observation"]
     self.from_json(@response.to_json)
+  end
+end
+class DailyForecast
+  def initialize(location, ten_day: false)
+    @location = get_location(location)
+    response = $all_responses["daily_forecast_response"]
+    response = $all_responses["daily_10day_forecast_response"] if ten_day
+    @response = response["forecast"]["simpleforecast"]
+    get_forecasts(ten_day: ten_day)
   end
 end
 
@@ -59,11 +66,11 @@ class WundergroundTests < ActiveSupport::TestCase
     assert_equal "7:23pm", a.observation_time
   end
 
-  def test_10day_forecast
-    a = Condition.new("CA/San_Francisco")
-    assert_equal "KCASANFR58", a.station_id
-    assert_equal "San Francisco, CA", a.display_location["full"]
-    assert_equal "SOMA - Near Van Ness, San Francisco, California", a.observation_location["full"]
-
+  def test_daily_forecast
+    ten = DailyForecast.new("CA/San_Francisco", ten_day: true)
+    four = DailyForecast.new("CA/San_Francisco")
+    assert_equal "79°F", four.forecasts[3][:high]
+    assert_equal "58°F", four.forecasts[3][:low]
+    assert_equal "13/mph NNW", ten.forecasts[9][:average_windspeed]
   end
 end
