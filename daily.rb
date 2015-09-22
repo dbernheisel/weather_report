@@ -21,7 +21,7 @@ class DailyForecast
     @response["forecastday"].each do |day|
 
       @forecasts << {
-        date: readable_time(epoch: day["date"]["epoch"].to_i, military_time: false),
+        date: readable_date(epoch: day["date"]["epoch"].to_i, military_time: false),
         high: "#{day["high"]["fahrenheit"]}°F",
         low: "#{day["low"]["fahrenheit"]}°F",
         conditions: day["conditions"],

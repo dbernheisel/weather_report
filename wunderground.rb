@@ -29,7 +29,7 @@ module Wunderground
     return location
   end
 
-  def readable_time(epoch: nil, hour: 0, minute: 0, military_time: true)
+  def readable_time(epoch: nil, hour: 0, minute: 0, military_time: true, utc: true)
     if epoch
       the_date = Time.at(epoch).utc.to_datetime
       hour = the_date.strftime('%k')
@@ -43,7 +43,12 @@ module Wunderground
         am_pm = "pm"
       end
     end
-    "#{the_hour}:#{minute}#{am_pm unless military_time} UTC".strip
+    "#{the_hour}:#{minute}#{am_pm unless military_time}#{' UTC' if utc}".strip
+  end
+
+  def readable_date(epoch:, military_time: false, utc: false)
+    the_date = Time.at(epoch).to_datetime
+    "#{the_date.strftime('%m/%d %a')}"
   end
 
   private

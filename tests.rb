@@ -16,8 +16,6 @@ WundergroundMigration.migrate(:up) rescue false
 
 # Load API samples
 $all_responses = JSON.parse(File.read('tests.json'))
-# sample_hourly_forecast_response = $all_responses["hourly_forecast_response"]
-# sample_hourly_10day_forecast_response = $all_responses["hourly_10day_forecast_response"]
 
 class Astronomy
   def initialize(location)
@@ -57,26 +55,28 @@ class HurricaneList
     get_hurricanes
   end
 end
+# $all_responses["hourly_forecast_response"]
+# $all_responses["hourly_10day_forecast_response"]
 
-class WundergroundTests < ActiveSupport::TestCase
+class WundergroundTests < Minitest::Test
   def test_astronomy
     a = Astronomy.new("Australia/Sydney")
     assert_equal "First Quarter", a.phase_of_moon
-    assert_equal "5:27am UTC", a.local_time
-    assert_equal "5:45am UTC", a.sunrise_time
-    assert_equal "5:51pm UTC", a.sunset_time
+    assert_equal "5:27am", a.local_time
+    assert_equal "5:45am", a.sunrise_time
+    assert_equal "5:51pm", a.sunset_time
     assert_equal 55, a.percent_illuminated
     assert_equal 8, a.age_of_moon
     assert_equal "South", a.hemisphere
   end
 
   def test_conditions
-    a = Condition.new("CA/San_Francisco")
-    assert_equal "KCASANFR58", a.station_id
-    assert_equal "San Francisco, CA", a.display_location["full"]
-    assert_equal "SOMA - Near Van Ness, San Francisco, California", a.observation_location["full"]
-    assert_equal "7:26pm UTC", a.local_time
-    assert_equal "7:23pm UTC", a.observation_time
+    c = Condition.new("CA/San_Francisco")
+    assert_equal "KCASANFR58", c.station_id
+    assert_equal "San Francisco, CA", c.display_location["full"]
+    assert_equal "SOMA - Near Van Ness, San Francisco, California", c.observation_location["full"]
+    assert_equal "7:26pm UTC", c.local_time
+    assert_equal "7:23pm UTC", c.observation_time
   end
 
   def test_daily_forecast

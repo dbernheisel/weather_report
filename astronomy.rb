@@ -35,11 +35,11 @@ class Astronomy
   end
 
   def local_time
-    readable_time(hour: self.local_time_hour, minute: self.local_time_minute, military_time: false)
+    readable_time(hour: self.local_time_hour, minute: self.local_time_minute, military_time: false, utc: false)
   end
 
   def sunrise_time
-    readable_time(hour: self.sunrise_hour, minute: self.sunrise_minute, military_time: false)
+    readable_time(hour: self.sunrise_hour, minute: self.sunrise_minute, military_time: false, utc: false)
   end
 
   def sunrise_hour
@@ -51,7 +51,7 @@ class Astronomy
   end
 
   def sunset_time
-    readable_time(hour: self.sunset_hour, minute: self.sunset_minute, military_time: false)
+    readable_time(hour: self.sunset_hour, minute: self.sunset_minute, military_time: false, utc: false)
   end
 
   def sunset_hour
