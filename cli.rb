@@ -103,6 +103,12 @@ HTTParty.head("http://www.google.com") rescue leave("No internet connection", 1)
 puts intro
 print "Where about would you like to hear the weather: "
 location = gets.chomp
+# state = ""
+# state_patterns.each do |pattern|
+#   state = pattern
+#   break if location.match(/<pattern>/)
+# end
+
 
 a = Astronomy.new(location)
 c = Condition.new(location)
