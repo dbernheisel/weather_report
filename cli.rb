@@ -120,9 +120,9 @@ bold = "\e[1;37m"
 rst = "\e[0m"
 
 if ((alerts.alerts.length > 0) rescue false)
-  puts "**-- ALERTS --**"
+  puts "\e[1;31m\e[5m**-- ALERTS --**#{rst}"
   alerts.alerts.each do |a|
-    puts "#{a[:description]}"
+    puts "#{bold}#{a[:description]}#{rst}"
     puts "Started on #{a[:starts_at]}"
     puts "Expires on #{a[:expires_at]}"
     puts "Affecting these areas: "
