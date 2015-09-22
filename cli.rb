@@ -144,6 +144,7 @@ puts ""
 puts "#{bold}SUN/MOON #{rst}"
 puts "  \e[1;33mSunrise#{rst}: #{a.sunrise_time} #{emoji[:sunrise]} "
 puts "  \e[1;33mSunset#{rst}: #{a.sunset_time} #{emoji[:sunset]} "
+puts "  \e[1;33mMoon Phase#{rst}: #{a.phase_of_moon} "
 puts ""
 
 if f.forecasts.length > 0

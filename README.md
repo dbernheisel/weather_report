@@ -1,7 +1,7 @@
 # Weather Underground CLI Interface
 
 ## Description
-This program was a homework assignment for one night at the Iron Yard. See this (source)[https://github.com/tiyd-rails-2015-08/weather_report]
+This program was a homework assignment for one night at the Iron Yard. See this [source](https://github.com/tiyd-rails-2015-08/weather_report)
 
 We practiced Test Driven Development while estimating the time it would take to develop. My original estimate was 8 hours to develop this program, and it took about 12 hours instead (too many rabbit holes, _emojis_!)
 
@@ -15,9 +15,9 @@ Once you have your key, put it into your Bash profile by doing this:
 and then restart your terminal for it to take effect.
 
 ## Screenshot
-![Preview:](screenshot.png)
+![screenshot](screenshot.png)
 
-## Powered by (Weather Underground)[http://www.wunderground.com/]
+## Powered by [Weather Underground](http://www.wunderground.com/)
 
 ## TODO
 - [x] Enhance with the super powers of emojis
