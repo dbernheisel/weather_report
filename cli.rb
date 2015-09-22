@@ -1,5 +1,4 @@
 require './wunderground.rb'
-require 'pry'
 
 ActiveRecord::Base.establish_connection(
   adapter:  'sqlite3',
@@ -83,10 +82,10 @@ intro += "              \e[1;33m|\e[0m         \n"
 intro += "     \e[1;33m.               /\e[0m        \n"
 intro += "      \e[1;33m\\\e[0m       \e[1;33mI\e[0m              \n"
 intro += "                  \e[1;33m/\e[0m\n"
-intro += "        \e[1;33m\\\e[0m  \e[43m,g88R\e[0m\e[0;36m_\e[0m\n"
-intro += "          \e[43md888\e[0m\e[0;36m(`  ).                   _\n"
-intro += " \e[1;33m-  --==\e[0m  \e[43m888\e[0m\e[0;36m(     ).\e[1;33m=--\e[0m           .\e[1;33m+\e[0m\e[0;36m(`  )`.\n"
-intro += "\e[0;36m)         \e[0m\e[43mY8P\e[0m\e[0;36m(       '`.          :(   .    )\n"
+intro += "        \e[1;33m\\\e[0m  \e[43m    \e[0m\e[0;36m_\e[0m\n"
+intro += "          \e[43m    \e[0m\e[0;36m(`  ).                   _\n"
+intro += " \e[1;33m-  --==\e[0m  \e[43m   \e[0m\e[0;36m(     ).\e[1;33m=--\e[0m           .\e[1;33m+\e[0m\e[0;36m(`  )`.\n"
+intro += "\e[0;36m)          \e[0m\e[43m  \e[0m\e[0;36m(       '`.          :(   .    )\n"
 intro += "        .\e[1;33m+\e[0m\e[0;36m (`(      .   )     .--  `.  (    ) )\n"
 intro += "\e[0;36m       ((    (..__.:'-'   .=(   )   ` _`  ) )\n"
 intro += "\e[0;36m`.     `(       ) )       (   .  )     (   )  ._\n"
