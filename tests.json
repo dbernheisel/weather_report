@@ -8606,7 +8606,7 @@
         }
       }
     },
-    "alerts_response":
+    "current_alerts_response":
     {
       "response": {
         "version": "0.1",

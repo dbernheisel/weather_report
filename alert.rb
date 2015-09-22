@@ -8,7 +8,6 @@ class Alert
     @location = get_location(location)
     response = get_response("alerts", location: @location)
     @response = response["alerts"]
-    @alerts = []
     get_alerts
     # TODO: Load query into table for caching.
   end
@@ -16,6 +15,7 @@ class Alert
   def get_alerts
     @response.each do |alert|
       zones = []
+      @alerts = []
       alert["ZONES"].each do |zone|
         z = zone_map["#{zone['state']}#{zone['ZONE']}"]
         zones << "#{county_location[z['County Location'].to_sym]} #{z['County']} (#{z['Zone Name']})".strip.titleize

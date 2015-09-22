@@ -16,10 +16,8 @@ WundergroundMigration.migrate(:up) rescue false
 
 # Load API samples
 $all_responses = JSON.parse(File.read('tests.json'))
-sample_current_alerts_response = $all_responses["current_alerts_response"]
-sample_current_hurricanes_response = $all_responses["current_hurricanes_response"]
-sample_hourly_forecast_response = $all_responses["hourly_forecast_response"]
-sample_hourly_10day_forecast_response = $all_responses["hourly_10day_forecast_response"]
+# sample_hourly_forecast_response = $all_responses["hourly_forecast_response"]
+# sample_hourly_10day_forecast_response = $all_responses["hourly_10day_forecast_response"]
 
 class Astronomy
   def initialize(location)
@@ -44,14 +42,29 @@ class DailyForecast
     get_forecasts(ten_day: ten_day)
   end
 end
+class Alert
+  def initialize(location)
+    @location = get_location(location)
+    response = $all_responses["current_alerts_response"]
+    @response = response["alerts"]
+    get_alerts
+  end
+end
+class HurricaneList
+  def initialize
+    response = $all_responses["current_hurricanes_response"]
+    @response = response["currenthurricane"]
+    get_hurricanes
+  end
+end
 
 class WundergroundTests < ActiveSupport::TestCase
   def test_astronomy
     a = Astronomy.new("Australia/Sydney")
     assert_equal "First Quarter", a.phase_of_moon
-    assert_equal "5:27am", a.local_time
-    assert_equal "5:45am", a.sunrise_time
-    assert_equal "5:51pm", a.sunset_time
+    assert_equal "5:27am UTC", a.local_time
+    assert_equal "5:45am UTC", a.sunrise_time
+    assert_equal "5:51pm UTC", a.sunset_time
     assert_equal 55, a.percent_illuminated
     assert_equal 8, a.age_of_moon
     assert_equal "South", a.hemisphere
@@ -62,8 +75,8 @@ class WundergroundTests < ActiveSupport::TestCase
     assert_equal "KCASANFR58", a.station_id
     assert_equal "San Francisco, CA", a.display_location["full"]
     assert_equal "SOMA - Near Van Ness, San Francisco, California", a.observation_location["full"]
-    assert_equal "7:26pm", a.local_time
-    assert_equal "7:23pm", a.observation_time
+    assert_equal "7:26pm UTC", a.local_time
+    assert_equal "7:23pm UTC", a.observation_time
   end
 
   def test_daily_forecast
@@ -77,12 +90,20 @@ class WundergroundTests < ActiveSupport::TestCase
   def test_alerts
     a = Alert.new("NM/Glenwood")
     assert_equal "Flash Flood Watch", a.alerts[0][:description]
-    assert_equal "9:36pm", a.alerts[0][:starts_at]
-    assert_equal "12:00am", a.alerts[0][:expires_at]
-    assert_equal 5, a.alerts[0][:zones].length
+    assert_equal "9:54am UTC", a.alerts[0][:starts_at]
+    assert_equal "12:00am UTC", a.alerts[0][:expires_at]
+    assert_equal 7, a.alerts[0][:zones].length
   end
 
   def test_hurricanes
-
+    h = HurricaneList.new
+    assert_equal 4, h.hurricanes.length
+    assert_equal "Malia", h.hurricanes[1][:name]
+    assert_equal "Tropical Storm", h.hurricanes[1][:category_name]
+    assert_equal 0, h.hurricanes[1][:category_size]
+    assert_equal "40/mph", h.hurricanes[1][:wind_speed]
+    assert_equal "50/mph", h.hurricanes[1][:gust_speed]
+    assert_equal "11/mph NNE", h.hurricanes[1][:direction]
+    assert_equal "1001/mb", h.hurricanes[1][:pressure]
   end
 end

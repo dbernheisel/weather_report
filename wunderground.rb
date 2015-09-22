@@ -43,12 +43,14 @@ module Wunderground
         am_pm = "pm"
       end
     end
-    "#{the_hour}:#{minute}#{am_pm unless military_time}"
+    "#{the_hour}:#{minute}#{am_pm unless military_time} UTC".strip
   end
 
   private
   def get_response(endpoint, location: nil)
-    HTTParty.get("http://api.wunderground.com/api/#{api_key}/#{endpoint}/q/#{get_location(location)}.json")
+    url = "http://api.wunderground.com/api/#{api_key}/#{endpoint}/q/#{get_location(location)}.json"
+    url = "http://api.wunderground.com/api/#{api_key}/currenthurricane/view.json" if endpoint == "currenthurricane"
+    HTTParty.get(url)
   end
 end
 

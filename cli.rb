@@ -36,6 +36,7 @@ emoji = {
   "Waning Gibbous Moon": 🌖,
   "Last Quarter Moon": 🌗,
   "Waning Crescent Moon": 🌘,
+  "hurricane": 🌀,
 }
 
 def leave(msg, status=0)
