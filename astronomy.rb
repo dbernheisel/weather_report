@@ -1,11 +1,13 @@
 class Astronomy
   include Wunderground
+
   attr_reader :location
   attr_reader :response
 
   def initialize(location)
-    @location = Wunderground.get_location(location)
-    @response = Wunderground.get_response("astronomy")
+    @location = get_location(location)
+    @response = get_response("astronomy", location: @location)
+    # TODO: Load query into table for caching.
   end
 
   def percent_illuminated
@@ -33,11 +35,11 @@ class Astronomy
   end
 
   def local_time
-    readable_time(self.local_time_hour, self.local_time_minute, false)
+    readable_time(hour: self.local_time_hour, minute: self.local_time_minute, military_time: false)
   end
 
   def sunrise_time
-    readable_time(self.sunrise_hour, self.sunrise_minute, false)
+    readable_time(hour: self.sunrise_hour, minute: self.sunrise_minute, military_time: false)
   end
 
   def sunrise_hour
@@ -49,7 +51,7 @@ class Astronomy
   end
 
   def sunset_time
-    readable_time(self.sunset_hour, self.sunset_minute, false)
+    readable_time(hour: self.sunset_hour, minute: self.sunset_minute, military_time: false)
   end
 
   def sunset_hour
@@ -60,16 +62,4 @@ class Astronomy
     @response["moon_phase"]["sunset"]["minute"].to_i
   end
 
-  private
-  def readable_time(hour, minute, military_time = true)
-    am_pm = "am"
-    the_hour = hour.to_i
-    unless military_time
-      if the_hour > 12
-        the_hour = the_hour - 12
-        am_pm = "pm"
-      end
-    end
-    "#{the_hour}:#{minute}#{am_pm unless military_time}"
-  end
 end
