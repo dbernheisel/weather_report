@@ -75,26 +75,26 @@ def leave(msg, status=0)
 end
 
 def intro
-intro = ""
-intro += "              \e[1;33m.\e[0m\n"
-intro += "                        \n"
-intro += "              \e[1;33m|\e[0m         \n"
-intro += "     \e[1;33m.               /\e[0m        \n"
-intro += "      \e[1;33m\\\e[0m       \e[1;33mI\e[0m              \n"
-intro += "                  \e[1;33m/\e[0m\n"
-intro += "        \e[1;33m\\\e[0m  \e[43m    \e[0m\e[0;36m_\e[0m\n"
-intro += "          \e[43m    \e[0m\e[0;36m(`  ).                   _\n"
-intro += " \e[1;33m-  --==\e[0m  \e[43m   \e[0m\e[0;36m(     ).\e[1;33m=--\e[0m           .\e[1;33m+\e[0m\e[0;36m(`  )`.\n"
-intro += "\e[0;36m)          \e[0m\e[43m  \e[0m\e[0;36m(       '`.          :(   .    )\n"
-intro += "        .\e[1;33m+\e[0m\e[0;36m (`(      .   )     .--  `.  (    ) )\n"
-intro += "\e[0;36m       ((    (..__.:'-'   .=(   )   ` _`  ) )\n"
-intro += "\e[0;36m`.     `(       ) )       (   .  )     (   )  ._\n"
-intro += "\e[0;36m  )      ` __.:'   )     (   (   ))     `-'.:(`  )\n"
-intro += "\e[0;36m)  )  ( )       --'       `- __.'         :(      ))\n"
-intro += "\e[0;36m.-'  (_.'          .')                    `(    )  ))\n"
-intro += " \e[0;36m                 (_  )                     ` __.:'\n"
-intro += "              \e[1;37mWEATHER GETTER\e[0m              \n"
-intro += "\e[1;32m--..,___.--,--'`,---..-.--+--.,,-,,..._.--..-._.---.\e[0m\n\n"
+  intro = ""
+  intro += "              \e[1;33m.\e[0m\n"
+  intro += "                        \n"
+  intro += "              \e[1;33m|\e[0m         \n"
+  intro += "     \e[1;33m.               /\e[0m        \n"
+  intro += "      \e[1;33m\\\e[0m       \e[1;33mI\e[0m              \n"
+  intro += "                  \e[1;33m/\e[0m\n"
+  intro += "        \e[1;33m\\\e[0m  \e[43m    \e[0m\e[0;36m_\e[0m\n"
+  intro += "          \e[43m    \e[0m\e[0;36m(`  ).                   _\n"
+  intro += " \e[1;33m-  --==\e[0m  \e[43m   \e[0m\e[0;36m(     ).\e[1;33m=--\e[0m           .\e[1;33m+\e[0m\e[0;36m(`  )`.\n"
+  intro += "\e[0;36m)          \e[0m\e[43m  \e[0m\e[0;36m(       '`.          :(   .    )\n"
+  intro += "        .\e[1;33m+\e[0m\e[0;36m (`(      .   )     .--  `.  (    ) )\n"
+  intro += "\e[0;36m       ((    (..__.:'-'   .=(   )   ` _`  ) )\n"
+  intro += "\e[0;36m`.     `(       ) )       (   .  )     (   )  ._\n"
+  intro += "\e[0;36m  )      ` __.:'   )     (   (   ))     `-'.:(`  )\n"
+  intro += "\e[0;36m)  )  ( )       --'       `- __.'         :(      ))\n"
+  intro += "\e[0;36m.-'  (_.'          .')                    `(    )  ))\n"
+  intro += " \e[0;36m                 (_  )                     ` __.:'\n"
+  intro += "              \e[1;37mWEATHER GETTER\e[0m              \n"
+  intro += "\e[1;32m--..,___.--,--'`,---..-.--+--.,,-,,..._.--..-._.---.\e[0m\n\n"
 end
 
 HTTParty.head("http://www.google.com") rescue leave("No internet connection", 1)
@@ -102,6 +102,7 @@ HTTParty.head("http://www.google.com") rescue leave("No internet connection", 1)
 puts intro
 print "Where about would you like to hear the weather: "
 location = gets.chomp
+## TODO: Friendlier matching for locations, based on states.
 # state = ""
 # state_patterns.each do |pattern|
 #   state = pattern
@@ -151,7 +152,7 @@ if f.forecasts.length > 0
   f.forecasts.each do |forecast|
     puts "  \e[1;33m#{forecast[:date]}#{rst} | High: #{forecast[:high]} | Low: #{forecast[:low]} | #{emoji[forecast[:icon].to_sym]}  #{forecast[:conditions]}"
   end
-puts ""
+  puts ""
 end
 
 if h.hurricanes.length > 0
@@ -160,10 +161,5 @@ if h.hurricanes.length > 0
     puts " #{emoji[:hurricane]}  \e[1;33m#{hurricane[:name]}#{rst} a size #{hurricane[:category_size]} #{hurricane[:category_name]}"
     puts "     Winds of #{hurricane[:wind_speed]} with gusts up to #{hurricane[:gust_speed]}."
   end
-puts ""
+  puts ""
 end
-
-
-
-
-
